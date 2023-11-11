@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2000"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="cubic(0.2,0.29,0.8,0.8)"
+        motion:pathMotionArc="startVertical">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe motion:maxVelocity="0.33" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/constraintLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="105dp"
+            android:layout_height="109dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:rotationX="0"
+            android:rotation="-180"
+            android:rotationY="0"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/circle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="28dp"
+            android:layout_height="27dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            motion:layout_constraintHorizontal_bias="0.723"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/quiz"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="191dp"
+            android:layout_height="116dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            motion:layout_constraintVertical_bias="0.496"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.445"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:id="@+id/back"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet>
+        <Constraint
+            android:id="@+id/circle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="28dp"
+            android:layout_height="27dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            motion:layout_constraintHorizontal_bias="0.723"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="correct_answer" type="id">Correct</string>
+    <string name="incorrect" type="id">Incorrect</string>
+</resources>
